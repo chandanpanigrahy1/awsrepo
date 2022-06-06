@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Docker login
-      run: Docker login -u="chandan143" -p="chandan12"
+    - name: docker login
+      run: docker login -u="chandan143" -p="chandan12"
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag chandan143/awsconfig:$gitsed
-    - name: Docker push
-      run: Docker push chandan143/awsconfig:$gitsed
+    - name: docker push
+      run: docker push chandan143/awsconfig:$gitsed
